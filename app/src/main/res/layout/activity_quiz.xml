@@ -6,14 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".QuizActivity">
 
+    <TextView
+        android:id="@+id/txtQuesDetails"
+        android:layout_width="322dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="9dp"
+        android:text="Question details"
+        app:layout_constraintBottom_toTopOf="@+id/chpGrpChoices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuesTitle" />
+
+    <TextView
+        android:id="@+id/txtQuesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:text="Android Question Title"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtQuesDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="325dp"
+        android:layout_width="316dp"
         android:layout_height="23dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="22dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtQuesTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtQuesNo"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,47 +51,50 @@
         android:id="@+id/txtQuesNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="9dp"
         android:text="1/5"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/progressBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtQuesTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="237dp"
-        android:text="Android Question Title"
-        android:textStyle="bold"
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="119dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="146dp"
+        android:text="Next"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        app:layout_constraintTop_toBottomOf="@+id/chpGrpChoices" />
 
-    <TextView
-        android:id="@+id/txtQuesDetails"
-        android:layout_width="322dp"
-        android:layout_height="136dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="45dp"
-        android:text="Question details"
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="119dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="146dp"
+        android:text="Submit"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtQuesTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/chpGrpChoices" />
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chpGrpChoices"
         android:layout_width="279dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="66dp"
-        android:layout_marginTop="83dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="66dp"
-        android:layout_marginBottom="81dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSubmitNext"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtQuesDetails"
@@ -74,35 +106,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checkable="true"
-            app:checkedIconTint="@color/purple_500"
-            android:text="Choice 1" />
+            android:text="Choice 1"
+            app:checkedIconTint="@color/purple_500" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chip2"
+            android:id="@+id/chpChoice2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checkable="true"
-            app:checkedIconTint="@color/purple_500"
-            android:text="Choice 2" />
+            android:text="Choice 2"
+            app:checkedIconTint="@color/purple_500" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chip3"
+            android:id="@+id/chpChoice3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checkable="true"
-            app:checkedIconTint="@color/purple_500"
-            android:text="Choice 3" />
+            android:text="Choice 3"
+            app:checkedIconTint="@color/purple_500" />
     </com.google.android.material.chip.ChipGroup>
 
-    <Button
-        android:id="@+id/btnSubmitNext"
-        android:layout_width="119dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="81dp"
-        android:layout_marginEnd="146dp"
-        android:text="Submit"
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="140dp"
+        android:text="Welcome your name!"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chpGrpChoices" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

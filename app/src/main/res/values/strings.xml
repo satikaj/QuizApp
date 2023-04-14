@@ -1,3 +1,49 @@
 <resources>
     <string name="app_name">QuizApp</string>
+    <string-array name="quesTitles">
+        <item>Layout - Markup language</item>
+        <item>Components - Data transfer</item>
+        <item>Components - Key components</item>
+        <item>Android - Programming languages</item>
+        <item>Layout - Layout structures</item>
+    </string-array>
+    <string-array name="quesDetails">
+        <item>Which markup language is used in layout files?</item>
+        <item>What do you use to transfer data between components?</item>
+        <item>Which of the following is not a key component of the Android application architecture?</item>
+        <item>Which of the following is not a native Android programming language?</item>
+        <item>Which layout structure requires you to set constraints for objects?</item>
+    </string-array>
+    <string-array name="q1Choices">
+        <item>HTML</item>
+        <item>XML</item>
+        <item>SGML</item>
+    </string-array>
+    <string-array name="q2Choices">
+        <item>Intents</item>
+        <item>Activities</item>
+        <item>Content Providers</item>
+    </string-array>
+    <string-array name="q3Choices">
+        <item>Activities</item>
+        <item>Services</item>
+        <item>Intents</item>
+    </string-array>
+    <string-array name="q4Choices">
+        <item>Flutter</item>
+        <item>Kotlin</item>
+        <item>Java</item>
+    </string-array>
+    <string-array name="q5Choices">
+        <item>Linear Layout</item>
+        <item>Relative Layout</item>
+        <item>Constraint Layout</item>
+    </string-array>
+    <string-array name="quesAnswers">
+        <item>XML</item>
+        <item>Intents</item>
+        <item>Intents</item>
+        <item>Flutter</item>
+        <item>Constraint Layout</item>
+    </string-array>
 </resources>
